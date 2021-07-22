@@ -9,7 +9,9 @@ Paste your code for fetch requests here once you finish each task.
   components to the console.
 */
 
-// Your code here
+fetch("localhost:5000/posts")
+  .then(res=>res.json())
+  .then(res=>console.log(res))
 
 
 
@@ -19,4 +21,9 @@ Paste your code for fetch requests here once you finish each task.
   components to the console.
 */
 
-// Your code here
+fetch("localhost:5000",{
+  method:"POST",
+  headers:{"Content-Type":"application/json"}
+})
+.then(res=>res.json())
+.then(res=>console.log(res))
